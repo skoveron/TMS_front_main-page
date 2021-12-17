@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import '/src/scss/variables.scss';
+
 * {
    padding: 0;
    margin: 0;
@@ -8,12 +10,12 @@
 
 .main {
    height: 100vh;
-   background: url(/img/main-bg.png) no-repeat;
+   background: url(/src/assets/img/main-bg.png) no-repeat;
    background-size: cover;
    position: relative;
-}
 
-.main::before {
+   
+&::before {
    content: '';
    position: absolute;
    background: rgba(0, 0, 0, 0.5);
@@ -21,27 +23,26 @@
    height: 100%;
 }
 
-.main-info-wrapper {
-   position: absolute;
-   top: 300px;
-   left: 170px;
-}
+   .main-info-wrapper {
+      position: absolute;
+      top: 300px;
+      left: 170px;
 
-.main-title {
-   font-family: 'Raleway', sans-serif;
-   font-weight: 500;
-   font-size: 68px;
-   color: white;
-   text-transform: uppercase;
-   margin-bottom: 70px;
-}
+   .main-title {
+         font-family: 'Raleway', sans-serif;
+         font-weight: 500;
+         font-size: 68px;
+         color: white;
+         text-transform: uppercase;
+         margin-bottom: 70px;
 
-.main-title em {
-   color:  #EC7979;
-   font-style: normal;
-}
+         em {
+            color: $pink;
+            font-style: normal;
+         }
+      }
 
-.main-subtitle {
+   .main-subtitle {
    font-family: 'Raleway', sans-serif;
    font-weight: 500;
    font-size: 48px;
@@ -50,20 +51,13 @@
    margin-bottom: 55px;
 }
 
-.main-text {
+   .main-text {
    font-family: 'Raleway', sans-serif;
    font-weight: 400;
    font-size: 18px;
    color: white;
    margin-bottom: 42px;
 }
-
-.line {
-   width: 170px;
-   border-bottom: 1px solid white;
-   margin-bottom: 42px;
-}
-
 .main-button {
    width: 270px;
    height: 58px;
@@ -77,6 +71,11 @@
    cursor: pointer;
 }
 
+   }
+}
+
+
+
 .main-form {
    width: 470px;
    height: 450px;
@@ -85,53 +84,74 @@
    position: absolute;
    top: 300px;
    left: 880px;
+
+   h3 {
+      width: 367px;
+      height: 90px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      text-transform: uppercase;
+      
+      span {
+         color:  #EC7979;
+      }
+   }
+   .submit-button {
+      width: 100%;
+      height: 60px;
+      background: #EC7979;
+      border: none;
+      border-radius: 0px 0px 10px 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: white;
+   }
+
+   .main-form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 200px;
+      justify-content: space-evenly;
+      margin: 45px 50px 75px 50px;
+
+      input {
+         width: 370px;
+         height: 38px;
+         border: none;
+         border-bottom: 1px solid #BDBDBD;
+      }
+   }
 }
 
-.main-form h3 {
-   width: 367px;
-   height: 90px;
-   font-family: 'Open Sans', sans-serif;
-   font-size: 24px;
-   font-weight: 700;
-   text-align: center;
-   margin: 0 auto;
-   display: flex;
-   align-items: center;
-   justify-content: space-evenly;
-   text-transform: uppercase;
-}
-.main-form h3 span {
-   color:  #EC7979;
-}
-.main-form-wrapper {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   height: 200px;
-   justify-content: space-evenly;
-   margin: 45px 50px 75px 50px;
-}
 
-.main-form-wrapper input {
-   width: 370px;
-   height: 38px;
-   border: none;
-   border-bottom: 1px solid #BDBDBD;
+
+
+.line {
+   width: 170px;
+   border-bottom: 1px solid white;
+   margin-bottom: 42px;
 }
 
 
-.submit-button {
-   width: 100%;
-   height: 60px;
-   background: #EC7979;
-   border: none;
-   border-radius: 0px 0px 10px 10px;
-   font-family: 'Open Sans', sans-serif;
-   font-size: 15px;
-   font-weight: 600;
-   text-align: center;
-   color: white;
-}
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 1440px) {
    .main-info-wrapper {
